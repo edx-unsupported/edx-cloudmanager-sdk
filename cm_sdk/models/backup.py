@@ -23,7 +23,8 @@ class BackupConfiguration(CommonEqualityMixin):
     def __init__(self):
         pass
 
-    
+class Foo:
+   pass    
 
 if __name__ == "__main__":
     
