@@ -46,7 +46,7 @@ setup_options = dict(
     url='https://github.com/edx-ops/edx-clhttps://github.com/edx-ops/edx-cloudmanager-sdk',
     packages=find_packages('.', exclude=['tests*']),
     package_dir={'cm_sdk': 'cm_sdk'},
-    install_requires=load_requirements('requirements.txt'),
+    install_requires=load_requirements('requirements/base.txt'),
     license="Apache2",
     classifiers=(
         'Programming Language :: Python :: 2.7',

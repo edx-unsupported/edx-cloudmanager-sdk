@@ -9,7 +9,7 @@ class CloudManagerClient(object):
 
     HEADERS = {'Content-type': 'application/json'}
 
-    def __init__(self, api_host, group_id, api_user, api_key):
+    def __init__(self, group_id, api_user, api_key, api_host):
         self.base_url = api_host + "/api/public/v1.0"
         self.group_id = group_id
         self.http_digest_auth = requests.auth.HTTPDigestAuth(api_user, api_key)
@@ -21,7 +21,7 @@ class CloudManagerClient(object):
 
     def _valid_response(self, response):
         if 'error' in response:
-            raise APIException(response['error'])
+            raise APIException(response)
         return response
 
 

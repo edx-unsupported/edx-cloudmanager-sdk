@@ -1,0 +1,13 @@
+{
+  "groupId": "xxx",
+  "clusterId": "yyy",
+  "statusName": "STARTED",
+  "storageEngineName" : "WIRED_TIGER",
+  "authMechanismName": "MONGODB_CR",
+  "username": "johnny5",
+  "password": "guess!",
+  "sslEnabled": false,
+  "syncSource": "PRIMARY",
+  "provisioned": true,
+  "excludedNamespaces": [ "a", "b", "c.d" ]
+}
