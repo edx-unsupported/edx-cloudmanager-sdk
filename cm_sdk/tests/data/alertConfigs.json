@@ -1,0 +1,253 @@
+{
+    "get_one_succeed": {
+        "method": "get",
+        "href": "/alertConfigs/eb08fea477f011e5befbecf4bb625d2e",
+        "response":         {
+            "created": "2015-10-21T12:39:07Z",
+            "enabled": true,
+            "eventTypeName": "OUTSIDE_METRIC_THRESHOLD",
+            "groupId": "53888ceec84d93219d138770",
+            "id": "eb08fea477f011e5befbecf4bb625d2e",
+            "links": [
+                {
+                    "href": "https://cloud.mongodb.com/api/public/v1.0/groups/53888ceec84d93219d138770/alertConfigs/eb08fea477f011e5befbecf4bb625d2e",
+                    "rel": "self"
+                }
+            ],
+            "matchers": [
+                {
+                    "fieldName": "TYPE_NAME",
+                    "operator": "CONTAINS",
+                    "value": "PRIMARY"
+                },
+                {
+                    "fieldName": "HOSTNAME",
+                    "operator": "STARTS_WITH",
+                    "value": "10.8"
+                }
+            ],
+            "metricThreshold": {
+                "metricName": "CONNECTIONS",
+                "mode": "AVERAGE",
+                "operator": "GREATER_THAN",
+                "threshold": 1000.0,
+                "units": "RAW"
+            },
+            "notifications": [
+                {
+                    "delayMin": 0,
+                    "emailEnabled": true,
+                    "intervalMin": 60,
+                    "smsEnabled": false,
+                    "typeName": "GROUP"
+                }
+            ],
+            "typeName": "HOST_METRIC",
+            "updated": "2015-10-21T12:39:07Z"
+        }
+    },
+        "get_other_succeed": {
+        "method": "get",
+        "href": "/alertConfigs/a039fe8a835f11e5ae08ecf4bb625d2e",
+        "response":         {
+            "created": "2015-10-21T12:39:07Z",
+            "enabled": true,
+            "eventTypeName": "OUTSIDE_METRIC_THRESHOLD",
+            "groupId": "53888ceec84d93219d138770",
+            "id": "a039fe8a835f11e5ae08ecf4bb625d2e",
+            "links": [
+                {
+                    "href": "https://cloud.mongodb.com/api/public/v1.0/groups/53888ceec84d93219d138770/alertConfigs/eb08fea477f011e5befbecf4bb625d2e",
+                    "rel": "self"
+                }
+            ],
+            "matchers": [
+                {
+                    "fieldName": "TYPE_NAME",
+                    "operator": "CONTAINS",
+                    "value": "PRIMARY"
+                },
+                {
+                    "fieldName": "HOSTNAME",
+                    "operator": "STARTS_WITH",
+                    "value": "10.9"
+                }
+            ],
+            "metricThreshold": {
+                "metricName": "CONNECTIONS",
+                "mode": "AVERAGE",
+                "operator": "GREATER_THAN",
+                "threshold": 1000.0,
+                "units": "RAW"
+            },
+            "notifications": [
+                {
+                    "delayMin": 0,
+                    "emailEnabled": true,
+                    "intervalMin": 60,
+                    "smsEnabled": false,
+                    "typeName": "GROUP"
+                }
+            ],
+            "typeName": "HOST_METRIC",
+            "updated": "2015-10-21T12:39:07Z"
+        }
+    },
+    "get_one_fail": {
+        "method": "get",
+        "href": "/alertConfigs/f3c1a9fe77ed11e58626ecf4bb625d2e",
+        "response": {
+            "created": "2015-10-21T12:27:26Z",
+            "enabled": true,
+            "eventTypeName": "TOO_MANY_UNHEALTHY_MEMBERS",
+            "groupId": "7d16eb9a779611e5a957ecf4bb625d2e",
+            "id": "f3c1a9fe77ed11e58626ecf4bb625d2e",
+            "links": [
+                {
+                    "href": "https://cloud.mongodb.com/api/public/v1.0/groups/7d16eb9a779611e5a957ecf4bb625d2e/alertConfigs/f3c1a9fe77ed11e58626ecf4bb625d2e",
+                    "rel": "self"
+                }
+            ],
+            "matchers": [
+                {
+                    "fieldName": "REPLICA_SET_NAME",
+                    "operator": "EQUALS",
+                    "value": "rs0"
+                }
+            ],
+            "notifications": [
+                {
+                    "delayMin": 0,
+                    "emailEnabled": true,
+                    "intervalMin": 60,
+                    "smsEnabled": false,
+                    "typeName": "GROUP"
+                }
+            ],
+            "threshold": {
+                "operator": "GREATER_THAN",
+                "threshold": 0
+            },
+            "typeName": "REPLICA_SET",
+            "updated": "2015-10-21T12:27:26Z"
+        }
+
+    },
+    "get_all": {
+        "method": "get",
+        "href": "/alertConfigs",
+        "response": {
+            "links": [
+                {
+                    "href": "https://cloud.mongodb.com/api/public/v1.0/groups/7d16eb9a779611e5a957ecf4bb625d2e/alertConfigs?null&pageNum=1&itemsPerPage=100",
+                    "rel": "self"
+                }
+            ],
+            "results": [
+                {
+                    "created": "2014-05-30T13:51:43Z",
+                    "enabled": true,
+                    "eventTypeName": "MONITORING_AGENT_DOWN",
+                    "groupId": "7d16eb9a779611e5a957ecf4bb625d2e",
+                    "id": "94d23000779611e58881ecf4bb625d2e",
+                    "links": [
+                        {
+                            "href": "https://cloud.mongodb.com/api/public/v1.0/groups/7d16eb9a779611e5a957ecf4bb625d2e/alertConfigs/94d23000779611e58881ecf4bb625d2e",
+                            "rel": "self"
+                        }
+                    ],
+                    "matchers": [],
+                    "notifications": [
+                        {
+                            "delayMin": 0,
+                            "emailEnabled": true,
+                            "intervalMin": 5,
+                            "smsEnabled": false,
+                            "typeName": "GROUP"
+                        }
+                    ],
+                    "typeName": "AGENT",
+                    "updated": "2014-05-30T13:51:43Z"
+                },
+                {
+                    "created": "2014-05-30T13:51:43Z",
+                    "enabled": true,
+                    "eventTypeName": "HOST_EXPOSED",
+                    "groupId": "7d16eb9a779611e5a957ecf4bb625d2e",
+                    "id": "53888cefe4b0d94f32b74eed",
+                    "links": [
+                        {
+                            "href": "https://cloud.mongodb.com/api/public/v1.0/groups/7d16eb9a779611e5a957ecf4bb625d2e/alertConfigs/53888cefe4b0d94f32b74eed",
+                            "rel": "self"
+                        }
+                    ],
+                    "matchers": [],
+                    "notifications": [
+                        {
+                            "delayMin": 0,
+                            "emailEnabled": true,
+                            "intervalMin": 5,
+                            "smsEnabled": false,
+                            "typeName": "GROUP"
+                        }
+                    ],
+                    "typeName": "HOST",
+                    "updated": "2014-05-30T13:51:43Z"
+                },
+                {
+                    "created": "2014-05-30T15:11:43Z",
+                    "enabled": true,
+                    "eventTypeName": "JOINED_GROUP",
+                    "groupId": "7d16eb9a779611e5a957ecf4bb625d2e",
+                    "links": [
+                        {
+                            "href": "https://cloud.mongodb.com/api/public/v1.0/groups/7d16eb9a779611e5a957ecf4bb625d2e/alertConfigs/53889fafe4b094d7ac4c465d",
+                            "rel": "self"
+                        }
+                    ],
+                    "matchers": [],
+                    "notifications": [
+                        {
+                            "delayMin": 0,
+                            "emailEnabled": true,
+                            "intervalMin": 60,
+                            "smsEnabled": false,
+                            "typeName": "GROUP"
+                        }
+                    ],
+                    "typeName": "USER",
+                    "updated": "2014-05-30T15:11:43Z"
+                },
+                {
+                    "created": "2014-08-19T17:06:12Z",
+                    "enabled": true,
+                    "eventTypeName": "USERS_AWAITING_APPROVAL",
+                    "groupId": "7d16eb9a779611e5a957ecf4bb625d2e",
+                    "id": "53f38404e4b084d65bcd221c",
+                    "links": [
+                        {
+                            "href": "https://cloud.mongodb.com/api/public/v1.0/groups/7d16eb9a779611e5a957ecf4bb625d2e/alertConfigs/53f38404e4b084d65bcd221c",
+                            "rel": "self"
+                        }
+                    ],
+                    "matchers": [],
+                    "notifications": [
+                        {
+                            "delayMin": 0,
+                            "emailEnabled": true,
+                            "intervalMin": 60,
+                            "roles": [
+                                "GROUP_OWNER",
+                                "GROUP_USER_ADMIN"
+                            ],
+                            "smsEnabled": false,
+                            "typeName": "GROUP"
+                        }
+                    ],
+                    "updated": "2014-08-19T17:06:12Z"
+                }
+            ],
+            "totalCount": 4
+        }
+    }
+}
