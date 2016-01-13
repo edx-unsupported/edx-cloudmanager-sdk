@@ -28,14 +28,14 @@ class Host(CloudManagerBase):
                          'hidden', 'host_enabled', 'hostname', 'ip_address', 'journaling_enabled', 'last_ping',
                          'last_reactivated', 'last_restart', 'logs_enabled', 'low_ulimit', 'munin_enabled',
                          'munin_port', 'password', 'port', 'profiler_enabled', 'replica_set_name', 'replica_state_name',
-                         'shard_name', 'ssl_enabled', 'type_name', 'uptime_msec', 'username', 'version']
+                         'shard_name', 'ssl_enabled', 'type_name', 'uptime_msec', 'username', 'version', 'cluster_id']
 
     def __init__(self, alerts_enabled=None, aliases=None, auth_mechanism_name=None, deactivated=None,
                  has_startup_warnings=None, hidden=None, host_enabled=None, hostname=None, ip_address=None,
                  journaling_enabled=None, last_ping=None, last_reactivated=None, last_restart=None, logs_enabled=None,
                  low_ulimit=None, munin_enabled=None, munin_port=None, password=None, port=None, profiler_enabled=None,
                  replica_set_name=None, replica_state_name=None, shard_name=None, ssl_enabled=None, type_name=None,
-                 uptime_msec=None, username=None, version=None):
+                 uptime_msec=None, username=None, version=None, cluster_id=None):
         CloudManagerBase.__init__(self, self.my_api_attributes)
         self.alerts_enabled = alerts_enabled
         self.aliases = aliases
@@ -65,4 +65,5 @@ class Host(CloudManagerBase):
         self.uptime_msec = uptime_msec
         self.username = username
         self.version = version
+        self.version = cluster_id
 
