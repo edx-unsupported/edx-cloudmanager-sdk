@@ -69,7 +69,8 @@ class AlertConfig(CloudManagerBase):
                 'type_name': {'class':TypeName},
                 'event_type_name': {'class':EventTypeName},
                 'metric_threshold': {'class':MetricThreshold},
-                'links': {'class':Link}
+                'links': {'class':Link},
+                'threshold': {'class': Threshold}
                 }
 
     def __init__(self, id=None, group_id=None, type_name=None,
@@ -89,6 +90,8 @@ class AlertConfig(CloudManagerBase):
 class Threshold(CloudManagerBase):
 
     my_api_attributes = ['operator', 'threshold']
+
+    children = {}
 
     def __init__(self, operator=None, threshold=None):
         self.operator = operator
