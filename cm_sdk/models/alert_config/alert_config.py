@@ -74,7 +74,8 @@ class AlertConfig(CloudManagerBase):
 
     def __init__(self, id=None, group_id=None, type_name=None,
                  event_type_name=None, enabled=False,
-                 matchers=None, notifications=None, metric_threshold=None):
+                 matchers=None, notifications=None, metric_threshold=None,
+                 threshold=None):
         CloudManagerBase.__init__(self, self.my_api_attributes)
         self.group_id = group_id
         self.type_name = type_name
@@ -83,3 +84,12 @@ class AlertConfig(CloudManagerBase):
         self.matchers = matchers if matchers is not None else []
         self.notifications = notifications if notifications is not None else []
         self.metric_threshold = metric_threshold
+        self.threshold = threshold
+
+class Threshold(CloudManagerBase):
+
+    my_api_attributes = ['operator', 'threshold']
+
+    def __init__(self, operator=None, threshold=None):
+        self.operator = operator
+        self.threshold = threshold
