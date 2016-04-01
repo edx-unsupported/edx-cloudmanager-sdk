@@ -118,7 +118,7 @@ class CloudManagerBase(object):
                 value = self.get_child(name, value)
 
         # Do not store nil values
-        if value:
+        if value is not None:
             self.state[name] = value
 
     def get_child(self, name, value):
