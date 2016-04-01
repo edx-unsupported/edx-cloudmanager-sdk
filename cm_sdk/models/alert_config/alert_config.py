@@ -43,6 +43,17 @@ class EventTypeName(CloudManagerEnum):
     DELINQUENT = "DELINQUENT"
 
 
+class Threshold(CloudManagerBase):
+
+    my_api_attributes = ['operator', 'threshold']
+
+    children = {}
+
+    def __init__(self, operator=None, threshold=None):
+        self.operator = operator
+        self.threshold = threshold
+
+
 class AlertConfig(CloudManagerBase):
     """
     Class and sub-classes for representing MongoDB CloudManager API objects in python.
@@ -85,14 +96,4 @@ class AlertConfig(CloudManagerBase):
         self.matchers = matchers if matchers is not None else []
         self.notifications = notifications if notifications is not None else []
         self.metric_threshold = metric_threshold
-        self.threshold = threshold
-
-class Threshold(CloudManagerBase):
-
-    my_api_attributes = ['operator', 'threshold']
-
-    children = {}
-
-    def __init__(self, operator=None, threshold=None):
-        self.operator = operator
         self.threshold = threshold
