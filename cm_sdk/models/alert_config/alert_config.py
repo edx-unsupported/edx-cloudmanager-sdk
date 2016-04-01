@@ -46,10 +46,10 @@ class EventTypeName(CloudManagerEnum):
 class Threshold(CloudManagerBase):
 
     my_api_attributes = ['operator', 'threshold']
-
     children = {}
 
     def __init__(self, operator=None, threshold=None):
+        CloudManagerBase.__init__(self, self.my_api_attributes)
         self.operator = operator
         self.threshold = threshold
 
