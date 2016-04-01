@@ -20,3 +20,4 @@ class TypeName(CloudManagerEnum):
     REPLICA_SET = "REPLICA_SET"
     USER = "USER"
     BILLING = "BILLING"
+    CLUSTER = "CLUSTER"
