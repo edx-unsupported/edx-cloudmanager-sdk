@@ -20,7 +20,7 @@ class CloudManagerJSONEncoder(JSONEncoder):
         elif hasattr(o, "state"):
             # converts class parameter names from snake case to camel case expected
             # by the API and prunes nulls
-            return dict((to_camel_case(k), v) for k, v in o.state.iteritems() if v)
+            return dict((to_camel_case(k), v) for k, v in o.state.iteritems() if v is not None)
         else:
             return None
 
