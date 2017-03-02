@@ -26,6 +26,7 @@
     "logsEnabled": true,
     "lowUlimit": false,
     "muninEnabled": false,
+    "password": "secret-password",
     "port": 27017,
     "profilerEnabled": false,
     "replicaSetName": "rs0",
