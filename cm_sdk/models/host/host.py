@@ -24,10 +24,9 @@ class Host(CloudManagerBase):
 
     children = {'type_name': {'class': TypeName}}
 
-    my_api_attributes = ['alerts_enabled', 'auth_mechanism_name', 'cluster_id', 'deactivated', 'has_startup_warnings', 'hidden', 'host_enabled', 'hostname', 'ip_address', 'journaling_enabled', 'last_data_size_bytes', 'last_index_size_bytes', 'last_ping', 'logs_enabled', 'low_ulimit', 'munin_enabled', 'port', 'profiler_enabled', 'replica_set_name', 'replica_state_name', 'ssl_enabled', 'type_name', 'uptime_msec', 'username', 'version']
+    my_api_attributes = ['alerts_enabled', 'auth_mechanism_name', 'cluster_id', 'deactivated', 'has_startup_warnings', 'hidden', 'host_enabled', 'hostname', 'ip_address', 'journaling_enabled', 'last_data_size_bytes', 'last_index_size_bytes', 'last_ping', 'last_restart', 'logs_enabled', 'low_ulimit', 'munin_enabled', 'port', 'profiler_enabled', 'replica_set_name', 'replica_state_name', 'ssl_enabled', 'type_name', 'uptime_msec', 'username', 'version']
 
-    def __init__(self, alerts_enabled=None, auth_mechanism_name=None, cluster_id=None, deactivated=None, has_startup_warnings=None, hidden=None, host_enabled=None, hostname=None, ip_address=None, journaling_enabled=None, last_data_size_bytes=None, last_index_size_bytes=None, last_ping=None, logs_enabled=None, low_ulimit=None, munin_enabled=None, port=None, profiler_enabled=None, replica_set_name=None, replica_state_name=None, ssl_enabled=None, type_name=None, uptime_msec=None, username=None, version=None):
-
+    def __init__(self, alerts_enabled=None, auth_mechanism_name=None, cluster_id=None, deactivated=None, has_startup_warnings=None, hidden=None, host_enabled=None, hostname=None, ip_address=None, journaling_enabled=None, last_data_size_bytes=None, last_index_size_bytes=None, last_ping=None, last_restart=None, logs_enabled=None, low_ulimit=None, munin_enabled=None, port=None, profiler_enabled=None, replica_set_name=None, replica_state_name=None, ssl_enabled=None, type_name=None, uptime_msec=None, username=None, version=None):
         CloudManagerBase.__init__(self, self.my_api_attributes)
         self.alerts_enabled = alerts_enabled
         self.auth_mechanism_name = auth_mechanism_name
@@ -42,6 +41,7 @@ class Host(CloudManagerBase):
         self.last_data_size_bytes = last_data_size_bytes
         self.last_index_size_bytes = last_index_size_bytes
         self.last_ping = last_ping
+        self.last_restart = last_restart
         self.logs_enabled = logs_enabled
         self.low_ulimit = low_ulimit
         self.munin_enabled = munin_enabled
