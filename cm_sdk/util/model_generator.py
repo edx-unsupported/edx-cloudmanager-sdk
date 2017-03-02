@@ -54,7 +54,7 @@ class ModelGenerator:
 
         for key in cleaned_keys:
 
-            constructor_args.append("{key} = None".format(key=key))
+            constructor_args.append("{key}=None".format(key=key))
             my_attributes.append("\'{key}\'".format(key=key))
             attributes_setters.append("self.{key} = {key}".format(key=key))
 
@@ -62,7 +62,7 @@ class ModelGenerator:
         class_name = os.path.splitext(os.path.basename(args.json_exemplar))[0]
 
         return CLASS_TEMPLATE.format(class_name=class_name,
-                                     my_attributes=",".join(my_attributes),
+                                     my_attributes=", ".join(my_attributes),
                                      constructor_args=", ".join(constructor_args),
                                      attributes_setters=setters)
 
