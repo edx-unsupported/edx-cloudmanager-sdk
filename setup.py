@@ -41,7 +41,7 @@ def load_requirements(*requirements_paths):
 
 setup_options = dict(
     name='edx-cloudmanager-sdk',
-    version='0.1',
+    version='0.2',
     description='Simple SDK for interactiong with the Mongo CloudManager REST API',
     url='https://github.com/edx-ops/edx-clhttps://github.com/edx-ops/edx-cloudmanager-sdk',
     packages=find_packages('.', exclude=['tests*']),

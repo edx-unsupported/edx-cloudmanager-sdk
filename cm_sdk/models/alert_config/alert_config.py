@@ -39,6 +39,19 @@ class EventTypeName(CloudManagerEnum):
     JOINED_GROUP = "JOINED_GROUP"
     REMOVED_FROM_GROUP = "REMOVED_FROM_GROUP"
     CREDIT_CARD_ABOUT_TO_EXPIRE = "CREDIT_CARD_ABOUT_TO_EXPIRE"
+    INCONSISTENT_BACKUP_CONFIGURATION = "INCONSISTENT_BACKUP_CONFIGURATION"
+    DELINQUENT = "DELINQUENT"
+
+
+class Threshold(CloudManagerBase):
+
+    my_api_attributes = ['operator', 'threshold']
+    children = {}
+
+    def __init__(self, operator=None, threshold=None):
+        CloudManagerBase.__init__(self, self.my_api_attributes)
+        self.operator = operator
+        self.threshold = threshold
 
 
 class AlertConfig(CloudManagerBase):
@@ -67,12 +80,14 @@ class AlertConfig(CloudManagerBase):
                 'type_name': {'class':TypeName},
                 'event_type_name': {'class':EventTypeName},
                 'metric_threshold': {'class':MetricThreshold},
-                'links': {'class':Link}
+                'links': {'class':Link},
+                'threshold': {'class': Threshold}
                 }
 
     def __init__(self, id=None, group_id=None, type_name=None,
                  event_type_name=None, enabled=False,
-                 matchers=None, notifications=None, metric_threshold=None):
+                 matchers=None, notifications=None, metric_threshold=None,
+                 threshold=None):
         CloudManagerBase.__init__(self, self.my_api_attributes)
         self.group_id = group_id
         self.type_name = type_name
@@ -81,3 +96,4 @@ class AlertConfig(CloudManagerBase):
         self.matchers = matchers if matchers is not None else []
         self.notifications = notifications if notifications is not None else []
         self.metric_threshold = metric_threshold
+        self.threshold = threshold

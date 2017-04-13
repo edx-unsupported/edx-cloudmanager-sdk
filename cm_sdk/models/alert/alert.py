@@ -19,3 +19,5 @@ class TypeName(CloudManagerEnum):
     GROUP = "GROUP"
     REPLICA_SET = "REPLICA_SET"
     USER = "USER"
+    BILLING = "BILLING"
+    CLUSTER = "CLUSTER"
