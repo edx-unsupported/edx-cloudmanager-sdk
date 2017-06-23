@@ -12,6 +12,7 @@ class TypeName(CloudManagerEnum):
     SLACK = "SLACK"
     FLOWDOCK = "FLOWDOCK"
     PAGER_DUTY = "PAGER_DUTY"
+    WEBHOOK = "WEBHOOK"
 
 class Notification(CloudManagerBase):
 
